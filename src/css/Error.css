@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Error page styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Error {
+  margin: 0 18px;
+}
+
+.Error > h1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  text-align: right;
+}
+
+.Error > h1 > span {
+  display: block;
+  margin: 30px 15px;
+}

@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: dimgrey;
+  background-color: gainsboro;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+input, select, textarea, button {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+:--input {
+  border: 0;
+  background-color: whitesmoke;
+  padding: 1px 6px;
+}
+
+button, [role=button] {
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+}
+
+/*
+ * Remove browser default margins (at least webkit)
+ */
+figure {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: brown;
+  text-decoration: none;
+  cursor: pointer;
+  &:--enter {
+    text-decoration: underline;
+  }
+}
+
+/* external links */
+a[href^=http]:after {
+  content: '';
+  display: inline-block;
+  background: url("data:image/svg+xml;utf8,<svg fill='darkgrey' viewBox='0 0 768 768' xmlns='http://www.w3.org/2000/svg' width='768' height='768'><path d='M576 384c-19.2 0-32 12.8-32 32v192c0 19.2-12.8 32-32 32H160c-19.2 0-32-12.8-32-32V256c0-19.2 12.8-32 32-32h192c19.2 0 32-12.8 32-32s-12.8-32-32-32H160c-54.4 0-96 41.6-96 96v352c0 54.4 41.6 96 96 96h352c54.4 0 96-41.6 96-96V416c0-19.2-12.8-32-32-32z'/><path d='M700.8 83.2c-3.2-6.4-9.6-12.8-16-16-3.2-3.2-9.6-3.2-12.8-3.2H480c-19.2 0-32 12.8-32 32s12.8 32 32 32h115.2L297.6 425.6c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 12.8 9.6 22.4 9.6s16-3.2 22.4-9.6L640 172.8V288c0 19.2 12.8 32 32 32s32-12.8 32-32V96c0-3.2 0-9.6-3.2-12.8z'/></svg>") no-repeat;
+  background-size: contain;
+  width: .75rem;
+  height: .75rem;
+  margin-left: 4px;
+}
+
+/*
+ * Default icon style
+ */
+
+:--icon {
+  width: 1em;
+  height: auto;
+  vertical-align: -.15em;
+}

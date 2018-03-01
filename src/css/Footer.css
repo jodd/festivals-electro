@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Footer styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Footer {
+  color: whitesmoke;
+  background-color: dimgrey;
+  text-align: center;
+  margin-top: 30px;
+  padding: 12px 24px 3rem;
+}
