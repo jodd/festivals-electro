@@ -2,9 +2,6 @@
    Routing
    ========================================================================== */
 
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-
 import App from './App'
 import Home from './components/Home'
 import Events from './components/Events'
@@ -57,3 +54,46 @@ export const routes = [{
     }]
   }
 ]
+
+// export const routes = [{
+//     path: "/admin",
+//     exact: true,
+//     component: require('./components/Admin'),
+//   }, {
+//     component: require('./App'),
+//     routes: [{
+//       path: "/",
+//       exact: true,
+//       component: require('./components/Home')
+//     }, {
+//       path: "/events",
+//       exact: true,
+//       component: require('./components/Events')
+//     }, {
+//       path: "/events/past",
+//       exact: true,
+//       component: require('./components/Events')
+//     }, {
+//       path: "/search",
+//       exact: true
+//     }, {
+//       path: "/performers",
+//       exact: true,
+//       component: require('./components/Performers')
+//     }, {
+//       path: '/events/:id',
+//       exact: true,
+//       component: require('./components/Event')
+//     }, {
+//       path: '/performers/:id',
+//       exact: true,
+//       component: require('./components/Performer')
+//     }, {
+//       path: '/map',
+//       exact: true,
+//       component: Map
+//     }, {
+//       component: require('./components/Error')
+//     }]
+//   }
+// ]

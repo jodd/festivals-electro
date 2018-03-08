@@ -3,7 +3,6 @@
    ========================================================================== */
 
 import fs from 'fs'
-import querystring from 'querystring'
 import { resolve as resolvePath } from 'path'
 import express from 'express'
 import webpack from 'webpack'
@@ -11,8 +10,8 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import { matchRoutes, renderRoutes } from 'react-router-config'
-import { routes } from '../src/routes'
-import template from '../src/template'
+import { routes } from '../client/routes'
+import template from './template'
 import FB from './fb'
 
 /* server config
@@ -24,7 +23,7 @@ const PORT = process.env.PORT || 8080
 
 if (ENV === 'development') {
 
-    const config = require('../webpack.dev')
+    const config = require('../../webpack.dev')
     const compiler = webpack(config)
 
     app.use(require('webpack-dev-middleware')(compiler, {
@@ -47,10 +46,10 @@ if (ENV === 'development') {
       reload: true
     }))
 } else if (ENV === 'production') {
-  app.use('/assets', express.static(resolvePath(__dirname, '../build')))
+  app.use('/assets', express.static(resolvePath(__dirname, '../../dist')))
 }
 
-app.use('/assets', express.static(resolvePath(__dirname, '../static')))
+app.use('/assets', express.static(resolvePath(__dirname, '../../static')))
 app.use(express.json())
 app.use(express.urlencoded())
 
@@ -122,7 +121,7 @@ app.post('/events', (req, res) => {
       return res.status(response.error.code).send(response.error.message)
     }
 
-    let data = fs.readFileSync(__dirname + '/data.json', 'utf8')
+    let data = fs.readFileSync(resolvePath(__dirname, 'data.json'), 'utf8')
     const { events, performers } = JSON.parse(data)
 
     if (event = events.find(e => e.facebook_id === event_fb_id)) {
@@ -145,7 +144,7 @@ app.post('/events', (req, res) => {
       events: events,
       performers: performers
     }
-    fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data, null, 2))
+    fs.writeFileSync(resolvePath(__dirname, 'data.json'), JSON.stringify(data, null, 2))
     res.send(data)
   })
 })
@@ -160,7 +159,7 @@ app.post('/performers', (req, res) => {
       return res.status(fb_res.error.code).send(fb_res.error.message)
     }
 
-    let data = fs.readFileSync(__dirname + '/data.json', 'utf8')
+    let data = fs.readFileSync(resolvePath(__dirname, 'data.json'), 'utf8')
     const { events, performers } = JSON.parse(data)
 
     // check if the performer is already stored
@@ -207,13 +206,13 @@ app.post('/performers', (req, res) => {
       events: events,
       performers: performers
     }
-    fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data, null, 2))
+    fs.writeFileSync(resolvePath(__dirname, 'data.json'), JSON.stringify(data, null, 2))
     res.send(data)
   })
 })
 
 app.post('/events/:id', (req, res) => {
-  let data = fs.readFileSync(__dirname + '/data.json', 'utf8')
+  let data = fs.readFileSync(resolvePath(__dirname, 'data.json'), 'utf8')
   const { events, performers } = JSON.parse(data)
   const event = events.find(e => e.id === req.params.id)
   const performer = req.body.performer ? performers.find(p =>
@@ -239,14 +238,14 @@ app.post('/events/:id', (req, res) => {
     performers: performers
   }
 
-  fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data, null, 2))
+  fs.writeFileSync(resolvePath(__dirname, 'data.json'), JSON.stringify(data, null, 2))
   res.send(Object.assign({
     item: event
   }, data))
 })
 
 app.post('/performers/:id', (req, res) => {
-  let data = fs.readFileSync(__dirname + '/data.json', 'utf8')
+  let data = fs.readFileSync(resolvePath(__dirname, 'data.json'), 'utf8')
   const { events, performers } = JSON.parse(data)
   const performer = performers.find(p => p.id === req.params.id)
   const links = req.body.links
@@ -260,7 +259,7 @@ app.post('/performers/:id', (req, res) => {
     performers: performers
   }
 
-  fs.writeFileSync(__dirname + '/data.json', JSON.stringify(data, null, 2))
+  fs.writeFileSync(resolvePath(__dirname, 'data.json'), JSON.stringify(data, null, 2))
   res.send(Object.assign({
     item: performer
   }, data))
@@ -294,7 +293,7 @@ function loadData(match) {
   Object.keys(match.params).forEach(key =>
     params[key] = match.params[key].split('?')[0])
 
-  const data = fs.readFileSync(__dirname + '/data.json', 'utf8')
+  const data = fs.readFileSync(resolvePath(__dirname, 'data.json'), 'utf8')
   const { events, performers } = JSON.parse(data)
 
   const dispatcher = {

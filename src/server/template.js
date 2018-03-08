@@ -1,6 +1,5 @@
 export default ({ status, meta, body, data }) => {
-  const PROD = process.env.NODE_ENV === 'production'
-  return PROD ? `
+  return process.env.NODE_ENV === 'production' ? `
     <!DOCTYPE html>
     <html lang="fr">
       <head>

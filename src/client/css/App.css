@@ -43,6 +43,8 @@
   display: block;
   position: relative;
   font-size: 1.8em;
+  color: var(--deepgrey);
+  margin-bottom: 15px;
   &:after {
     content: '';
     position: absolute;
@@ -50,14 +52,13 @@
     left: 50%;
     width: 21px;
     height: 2px;
-    background-color: dimgrey;
+    background-color: var(--deepgrey);
     transform: translateX(-50%);
   }
 }
 
 .DateSticker-month {
   display: block;
-  margin-top: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
