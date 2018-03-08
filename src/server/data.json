@@ -975,7 +975,9 @@
       },
       "id": "36",
       "facebook_id": "494692274250218",
-      "lineup": [],
+      "lineup": [
+        "32"
+      ],
       "links": {
         "ws": "https://www.arcadialondon.co.uk/",
         "ra": ""
@@ -1972,6 +1974,32 @@
         "fb": "https://www.facebook.com/AgentsOfTime/"
       },
       "genre": "Electronic / Techno"
+    },
+    {
+      "id": "32",
+      "name": "Leftfield",
+      "facebook_id": "leftfield",
+      "picture": {
+        "data": {
+          "height": 200,
+          "is_silhouette": false,
+          "url": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/16832057_10158233942490322_4449280986054932619_n.jpg?oh=d1643c7fff44df34a6748344d5b7e15e&oe=5B0D39DC",
+          "width": 200
+        }
+      },
+      "cover": {
+        "cover_id": "10160080766995322",
+        "offset_x": 0,
+        "offset_y": 12,
+        "source": "https://scontent.xx.fbcdn.net/v/t1.0-0/p480x480/28276317_10160080766995322_4179606437321092588_n.jpg?oh=efb2e3cbacb3e2b72b152c6d7f6b759f&oe=5B367CDD",
+        "id": "10160080766995322"
+      },
+      "events": [
+        "36"
+      ],
+      "links": {
+        "fb": "https://www.facebook.com/leftfield/"
+      }
     }
   ]
 }
