@@ -56,7 +56,7 @@ module.exports = [merge(common, {
     __dirname: true
   },
   entry: {
-    server: "./src/server/index"
+    server: "./server/index"
   },
   module: {
     rules: [

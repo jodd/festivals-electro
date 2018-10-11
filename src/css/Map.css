@@ -1,0 +1,24 @@
+/* ==========================================================================
+    Map
+   ========================================================================== */
+@import '_vars.css';
+
+.Page-map {
+  @media (--small-screen) {
+    margin-top: 6rem;
+    margin-bottom: 0;
+  }
+  @media (--medium-screen) {
+    margin-top: 3.9rem;
+  }
+}
+
+#map {
+  height: calc(100vh - 2.7rem);
+  @media (--small-screen) {
+    height: calc(100vh - 6rem);
+  }
+  @media (--medium-screen) {
+    height: calc(100vh - 5.1rem);
+  }
+}

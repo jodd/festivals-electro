@@ -1,0 +1,31 @@
+/* ==========================================================================
+    Performer Minicard
+   ========================================================================== */
+@import '_vars.css';
+
+.PerformerMinicard > a {
+  display: inline-block;
+  color: dimgrey;
+  font-weight: 600;
+  line-height: 1.2;
+  &:after {
+    content: " ";
+    display: table;
+    clear: left;
+  }
+}
+
+.PerformerMinicard-picture {
+  float: left;
+  width: 51px;
+  height: 51px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+
+.PerformerMinicard-info {
+  display: block;
+  font-weight: inherit;
+  overflow: hidden;
+  margin-top: 6px;
+}

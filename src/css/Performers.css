@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Performers styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Performers {
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.Performers > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 12px 6px;
+  @media(--large-screen) {
+    margin: 12px -6px;
+  }
+}
+
+.PerformerCard {
+  width: calc(50% - 12px);
+  margin: 0 6px 18px;
+  background-color: whitesmoke;
+  border: 1px solid silver;
+  @media(--small-screen) {
+    width: calc(33.333% - 12px);
+  }
+  @media(--medium-screen) {
+    width: calc(25% - 12px);
+  }
+  @media(--large-screen) {
+    width: calc(20% - 12px);
+  }
+  @media(--extra-large-screen) {
+    width: calc(16.666% - 12px);
+  }
+}
+
+.PerformerCard > a {
+  display: block;
+  text-align: center;
+  color: var(--deepgrey);
+}
+
+.PerformerCard img {
+  max-width: none;
+  width: 100%;
+}
+
+.PerformerCard span {
+  display: block;
+  padding: 6px;
+  border-top: 1px solid gainsboro;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 800;
+  &:--enter {
+    text-decoration: underline;
+  }
+}

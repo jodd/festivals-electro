@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Admin styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Admin {
+  max-width: none;
+  margin: 4.5rem 30px 30px;
+}
+
+.Admin:after {
+  content: " ";
+  display: table;
+  clear: right;
+}
+
+.Admin-list {
+  position: fixed;
+  top: 3rem;
+  height: calc(100% - 3rem);
+  padding-bottom: 30px;
+  width: 30%;
+}
+
+.Admin-list > div {
+  height: 50%;
+  overflow-y: hidden;
+}
+
+.Admin-list > div > ul {
+  overflow-y: auto;
+}
+
+.Admin-item {
+  width: 66%;
+  float: right;
+}
+
+.Admin-item form :--input {
+  width: 100%;
+}
+
+.Admin .errorMessage {
+  float: right;
+}

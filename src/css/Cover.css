@@ -1,0 +1,27 @@
+/* ==========================================================================
+    Cover
+   ========================================================================== */
+@import '_vars.css';
+
+.Cover {
+  position: relative;
+  padding-top: 52.4%;
+  overflow: hidden;
+}
+
+.Cover > img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.Cover.fitHeight > img {
+  top: 0;
+  left: 50%;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  transform: translateX(-50%);
+}

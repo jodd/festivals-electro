@@ -1,0 +1,19 @@
+/* ==========================================================================
+   User styles
+   ========================================================================== */
+@import '_vars.css';
+
+.User {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  padding: .6rem 1rem;
+  background-color: silver;
+  z-index: 1;
+}
+
+.User input {
+  margin: 0 1em;
+}

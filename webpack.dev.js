@@ -11,7 +11,7 @@ module.exports = merge(common, {
     app: [
       "react-hot-loader/patch",
       "webpack-hot-middleware/client?noInfo=false",
-      "./src/client/index"
+      "./src/index"
     ]
   },
   devtool: "inline-source-map",

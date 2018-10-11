@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Events styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Events {
+  max-width: 360px;
+  margin: 0 auto;
+  @media(--small-screen) {
+    max-width: 450px;
+  }
+  @media(--large-screen) {
+    max-width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media(--extra-large-screen) {
+    max-width: none;
+  }
+}
+
+/* Events nav
+   -------------------------------------------------------------------------- */
+.Events > nav {
+  margin-bottom: 18px;
+  /* padding: 0 6px; */
+  background-color: rgba(255,255,255,.45);
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: silver;
+  @media(--small-screen) {
+    border-width: 1px;
+  }
+}
+
+.Events > nav > a {
+  display: inline-block;
+  color: var(--dustgrey);
+  text-decoration: none;
+  width: 50%;
+  padding: 9px 0;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  &:--enter {
+    border-bottom-color: gainsboro;
+  }
+  &.active {
+    color: var(--deepgrey);
+    font-weight: 600;
+    border-bottom-color: tomato;
+  }
+}

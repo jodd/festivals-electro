@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Search styles
+   ========================================================================== */
+@import '_vars.css';
+
+.Search-results > div > span {
+  display: block;
+  font-weight: 800;
+  background-color: var(--brightgrey);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 6px 12px;
+  letter-spacing: 1px;
+}
+
+.Search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 12px 12px 9px;
+}
+
+.Search-results-events,
+.Search-results-performers {
+  background-color: whitesmoke;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: silver;
+  margin-bottom: 30px;
+  & > div {
+    margin: 12px;
+    font-style: italic;
+    color: grey;
+  }
+  @media(--medium-screen) {
+    display: inline-block;
+    width: calc(50% - 12px);
+    vertical-align: top;
+    border-width: 1px;
+  }
+}
+
+.Search-results-performers {
+  @media(--medium-screen) {
+    margin-left: 24px;
+  }
+}
+
+.Search-results-performers > ul > li {
+  margin-bottom: 12px;
+}

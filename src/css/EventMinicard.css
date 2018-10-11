@@ -1,0 +1,54 @@
+/* ==========================================================================
+   EventMinicard styles
+   ========================================================================== */
+@import '_vars.css';
+
+.EventMinicard {
+  margin-bottom: 12px;
+  &:after {
+    content: " ";
+    display: table;
+    clear: left;
+  }
+}
+
+.pastEvents .EventMinicard {
+  opacity: .6;
+}
+
+.EventMinicard + .EventMinicard {
+  border-top: 1px solid gainsboro;
+  padding-top: 12px;
+}
+
+.EventMinicard .DateSticker {
+  float: left;
+}
+
+.EventMinicard-content {
+  overflow: hidden;
+  padding-left: 9px;
+}
+
+.EventMinicard-title {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--deepgrey);
+}
+
+.EventMinicard-place {
+  position: relative;
+  margin-top: 3px;
+  padding-left: 1.5rem;
+  font-size: .9rem;
+}
+
+.EventMinicard-place :--icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 1rem;
+  fill: grey;
+  transform: translateY(-50%);
+}
