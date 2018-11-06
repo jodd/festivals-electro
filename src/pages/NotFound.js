@@ -5,7 +5,7 @@
 import React from 'react'
 import MetaTags from 'react-meta-tags'
 
-import Status from './Status'
+import Status from '../components/Status'
 
 if (process.env.WEBPACK) {
   require( '../css/NotFound.css' )

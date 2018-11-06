@@ -7,8 +7,8 @@ import MetaTags from 'react-meta-tags'
 import { Link } from 'react-router-dom'
 import queryString from 'query-string'
 
-import EventMinicard from './EventMinicard'
-import PerformerMinicard from './PerformerMinicard'
+import EventMinicard from '../components/EventMinicard'
+import PerformerMinicard from '../components/PerformerMinicard'
 
 if (process.env.WEBPACK) {
   require('../css/Search.css')

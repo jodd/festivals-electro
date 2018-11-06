@@ -4,10 +4,11 @@
 
 import React from 'react'
 import MetaTags from 'react-meta-tags'
+import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import { DateRange } from '../utils'
-import Cover from './Cover'
-import PerformerMinicard from './PerformerMinicard'
+import Cover from '../components/Cover'
+import PerformerMinicard from '../components/PerformerMinicard'
 
 if (process.env.WEBPACK) {
   require('../css/Event.css')

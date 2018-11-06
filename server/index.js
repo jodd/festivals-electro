@@ -10,7 +10,6 @@ import passport from 'passport'
 import securePassword from 'secure-password'
 import { Strategy as LocalStrategy } from 'passport-local'
 import webpack from 'webpack'
-import React from 'react'
 
 import routes from './routes/index'
 import users from './routes/users'

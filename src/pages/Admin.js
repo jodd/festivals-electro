@@ -7,8 +7,8 @@ import MetaTags from 'react-meta-tags'
 
 import Event from './Event'
 import Performer from './Performer'
-import User from './User'
-import AddPerformer from './admin/AddPerformer'
+import User from '../components/User'
+import AddPerformer from '../components/admin/AddPerformer'
 import { postJSON } from '../utils'
 
 if (process.env.WEBPACK) {

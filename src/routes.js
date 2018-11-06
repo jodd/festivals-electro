@@ -3,16 +3,16 @@
    ========================================================================== */
 
 import App from './App'
-import Home from './components/Home'
-import Events from './components/Events'
-import Event from './components/Event'
-import Performer from './components/Performer'
-import Performers from './components/Performers'
-import NotFound from './components/NotFound'
-import Map from './components/Map'
-import Login from './components/Login'
-import Admin from './components/Admin'
-import Search from './components/Search'
+import Home from './pages/Home'
+import Events from './pages/Events'
+import Event from './pages/Event'
+import Performer from './pages/Performer'
+import Performers from './pages/Performers'
+import NotFound from './pages/NotFound'
+import Map from './pages/Map'
+import Login from './pages/Login'
+import Admin from './pages/Admin'
+import Search from './pages/Search'
 
 export const routes = [{
     path: "/admin",

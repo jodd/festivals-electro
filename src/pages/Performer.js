@@ -6,8 +6,8 @@ import React from 'react'
 import MetaTags from 'react-meta-tags'
 import { Link } from 'react-router-dom'
 import { loadScript } from '../utils'
-import Cover from './Cover'
-import EventMinicard from './EventMinicard'
+import Cover from '../components/Cover'
+import EventMinicard from '../components/EventMinicard'
 
 if (process.env.WEBPACK) {
   require( '../css/Performer.css' )

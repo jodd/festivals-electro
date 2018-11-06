@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import MetaTags from 'react-meta-tags'
 import { NavLink } from 'react-router-dom'
 
-import EventCard from './EventCard'
+import EventCard from '../components/EventCard'
 
 if (process.env.WEBPACK) {
   require('../css/Events.css')
