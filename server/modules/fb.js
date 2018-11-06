@@ -3,13 +3,10 @@
    ========================================================================== */
 
 import https from 'https'
+import { app_id, app_secret } from '../db/fb.json'
 
-const app_id = '***REMOVED***'
-const app_secret = '***REMOVED***'
-const client_token = '***REMOVED***'
 const access_token = app_id + '|' + app_secret
 const token_param = '&access_token=' + access_token
-// const token_param = '&access_token=' + client_token
 
 export default {
 

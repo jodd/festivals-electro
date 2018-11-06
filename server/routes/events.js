@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
   .then(fb_res => {
 
     if (fb_res.error) {
-      return res.status(fb_res.error.code).send(fb_res.error.message)
+      return res.status(500).send(fb_res.error.message)
     }
 
     let data = fs.readFileSync(resolvePath(__dirname, '../db/data.json'), 'utf8')
