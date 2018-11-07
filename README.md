@@ -1,6 +1,6 @@
 # Festivals-electro
 
-This is a training project is use to learn and test web technos.
+This is a training project I use to learn and test web technos.
 The content is about electronic music festivals and performers.
 It has a search box and shows a map locating the festivals.
 There is also a secured admin page to manage content.
@@ -15,6 +15,7 @@ The result is here : https://festivals-electro.herokuapp.com/events
 - [React Router](https://reacttraining.com/react-router/)
 - [Webpack](https://webpack.js.org/)
 - [PostCSS/CSSnext](http://cssnext.io/)
+- [Google Maps API](https://cloud.google.com/maps-platform/)
 
 ## Resources
 
