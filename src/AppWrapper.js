@@ -12,7 +12,6 @@ import React from 'react'
 import { Route, withRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import { routes } from './routes'
-// import 'imports-loader?Promise=promise-polyfill!whatwg-fetch'
 
 class AppWrapper extends React.Component {
 
