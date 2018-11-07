@@ -1,6 +1,20 @@
 # Festivals-electro
 
-Source code of a test project using Node, Express, Passport, React, React-router and Webpack.
+This is a training project is use to learn and test web technos.
+The content is about electronic music festivals and performers.
+It has a search box and shows a map locating the festivals.
+There is also a secured admin page to manage content.
+
+The result is here : https://festivals-electro.herokuapp.com/events
+
+## Libraries and tools used in this project
+- [Node.js](https://nodejs.org)
+- [Express](https://expressjs.com/)
+- [Passport](http://www.passportjs.org/)
+- [React](https://reactjs.org/)
+- [React Router](https://reacttraining.com/react-router/)
+- [Webpack](https://webpack.js.org/)
+- [PostCSS/CSSnext](http://cssnext.io/)
 
 ## Resources
 
@@ -24,7 +38,6 @@ Source code of a test project using Node, Express, Passport, React, React-router
 ### auth
 
 - https://medium.com/of-all-things-tech-progress/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
-- http://www.passportjs.org/
 - https://hackernoon.com/your-node-js-authentication-tutorial-is-wrong-f1a3bf831a46
 - https://tylermcginnis.com/react-router-protected-routes-authentication/
 
